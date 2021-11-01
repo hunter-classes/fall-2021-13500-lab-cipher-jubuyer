@@ -5,33 +5,6 @@
 #include <cctype>
 #include "funcs.h"
 
-/*
-int main(int argc, char const *argv[]) {
-
-  // test
-  // If he had anything confidential to say, he wrote it in cipher, that is, by so
-  // changing the order of the letters of the alphabet, that not a word could be
-  // made out.
-  std::string test = "Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu "
-  "jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, "
-  "aoha uva h dvyk jvbsk il thkl vba.";
-
-  // test 2
-  // I'm not sure if this works so im going to write 3alot with mistakes and
-  // see if theres any issues 921 because i couldnt' figue out the issue
-  std::string test2 = "P't uva zbyl pm aopz dvyrz zv pt nvpun av dypal 3hsva "
-  "dpao tpzahrlz huk zll pm aolylz huf pzzblz 921 iljhbzl p jvbskua' mpnbl "
-  " vba aol pzzbl";
-
-  std::string test3 = "This is to test whether or not my program can handle "
-  "being given normal text and simply returning this text again";
-
-  std::cout << solve(test3) << '\n';
-
-  return 0;
-}
-*/
-
 // add functions here
 std::string solve(std::string encrypted_string) {
   int key = 0; //correct rotation to dencrypt
@@ -132,3 +105,30 @@ char decryptCaesarChar(char c, int rshift) {
   }
   return output;
 }
+
+/*
+int main(int argc, char const *argv[]) {
+
+  // test
+  // If he had anything confidential to say, he wrote it in cipher, that is, by so
+  // changing the order of the letters of the alphabet, that not a word could be
+  // made out.
+  std::string test = "Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu "
+  "jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, "
+  "aoha uva h dvyk jvbsk il thkl vba.";
+
+  // test 2
+  // I'm not sure if this works so im going to write 3alot with mistakes and
+  // see if theres any issues 921 because i couldnt' figue out the issue
+  std::string test2 = "P't uva zbyl pm aopz dvyrz zv pt nvpun av dypal 3hsva "
+  "dpao tpzahrlz huk zll pm aolylz huf pzzblz 921 iljhbzl p jvbskua' mpnbl "
+  " vba aol pzzbl";
+
+  std::string test3 = "This is to test whether or not my program can handle "
+  "being given normal text and simply returning this text again";
+
+  std::cout << solve(test3) << '\n';
+
+  return 0;
+}
+*/
