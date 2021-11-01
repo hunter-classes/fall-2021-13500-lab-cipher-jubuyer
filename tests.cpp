@@ -33,4 +33,9 @@ TEST_CASE("CAESAR CIPHER SOLVER") {
     CHECK(solve("Ocdn dn ojj ncjmo, ndm!") == "This is too short, sir!");
     CHECK(solve("Ubj fubeg?") != "How short?");
   }
+
+  SUBCASE("Plaintext Test") {
+    CHECK(solve("This should theoretically return the same thing") == "This sho"
+    "uld theoretically return the same thing");
+  }
 }
