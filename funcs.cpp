@@ -10,9 +10,11 @@ std::string solve(std::string encrypted_string) {
   int key = 0; //correct rotation to dencrypt
   std::string rotation = "";
   std::string output = "";
-  std::vector<double> currentFreq(26);
+  std::vector<double> currentFreq(26); //vector to hokd frequency of each rotation
   double closest = 0.0;
 
+  //CONSTANT array to hold frequency of letters in English language based off
+  //http://cs.wellesley.edu/~fturbak/codman/letterfreq.html
   const double ENGLISH_FREQ[26] = {.084966, .020720, .045388, .033844, .111607,
   .018121, .024705, .030034, .075448, .001964, .011016, .054893, .030129,
   .066544, .071635, .031671, .001962, .075809, .057351, .069509, .036308,
