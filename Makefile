@@ -7,10 +7,12 @@ tests: tests.o funcs.o
 
 
 funcs.o: funcs.cpp funcs.h
+	g++ -c -std=c++11 funcs.cpp
 
 main.o: main.cpp funcs.h
+	g++ -c -std=c++11 main.cpp
 
 tests.o: tests.cpp doctest.h funcs.h
-
+	g++ -c -std=c++11 tests.cpp
 clean:
-	rm -f main.o funcs.o tests.o
+	rm -f *o a.out main tests
