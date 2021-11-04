@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 // add prototypes here
 std::string decryptCaesar(std::string ciphertext, int rshift);

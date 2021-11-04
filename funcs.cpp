@@ -7,7 +7,7 @@
 
 // add functions here
 std::string solve(std::string encrypted_string) {
-  int key = 0; //correct rotation to dencrypt
+  // int key; //correct rotation to dencrypt
   std::string rotation = "";
   std::string output = "";
   std::vector<double> currentFreq(26); //vector to hokd frequency of each rotation
@@ -39,7 +39,7 @@ std::string solve(std::string encrypted_string) {
     //if new lower distance found store the information
     if (distance < closest) {
       closest = distance;
-      key = i;
+      // key = i;
       output = rotation;
     }
     // std::cout << "closest: " << closest << '\n';
@@ -79,7 +79,8 @@ std::vector<double> calcFreq(std::string ciphertext) {
 }
 
 std::string decryptCaesar(std::string ciphertext, int rshift) {
-  for (int i = 0; i < ciphertext.length(); i++) {
+  int cipher_len = ciphertext.length();
+  for (int i = 0; i < cipher_len; i++) {
     ciphertext[i] = decryptCaesarChar(ciphertext[i], rshift);
   }
   return ciphertext;
